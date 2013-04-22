@@ -1,0 +1,10 @@
+src:
+    phplib:     lib/
+    statics:    www/assets/
+    views:      views/
+    www:        www/
+target:
+    phplib:     /opt/share/sites/lobuki/lib
+    statics:    /opt/www/sites/cdn/lobuki
+    views:      /opt/share/sites/lobuki/views
+    www:        /opt/www/sites/lobuki

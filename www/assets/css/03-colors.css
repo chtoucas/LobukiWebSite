@@ -1,0 +1,40 @@
+/* -------------------------------------------------------------------------- *
+ * Colors                                                                     *
+ * -------------------------------------------------------------------------- */
+
+BODY, HTML { background-color: white; color: #666; }
+A { color: #666; }
+A:hover, A:hover STRONG { color: #ff99cc; }
+H1 { color: #ff99cc; }
+H2 { color: #666; }
+H3 { color: #93C1C2; }
+/* STRONG { color: black; } */
+
+/* ------ *
+ * Master *
+ * ------ */
+
+LI.more > SPAN:hover { color: #ff99cc; }
+LI.current A { background-color: #fff; color: #ff99cc; }
+#menu_categories LI UL { background-color: #fff; }
+
+LI:hover #sticker-mural, #sticker-mural.current, UL.rose LI:hover A { background-color: #ff3399; color: #fff; }
+#menu_categories UL.rose { border-color: #ff3399; }
+LI:hover #affiche, #affiche.current, UL.green LI:hover A { background-color: #33cc66; color: #fff; }
+#menu_categories UL.green { border-color: #33cc66; }
+LI:hover #textile, #textile.current, UL.blue LI:hover A { background-color: #cc66cc; color: #fff; }
+#menu_categories UL.blue { border-color: #cc66cc; }
+LI:hover #papeterie, #papeterie.current, UL.red LI:hover A  { background-color: #ff0033; color: #fff; }
+#menu_categories UL.red { border-color: #ff0033; }
+LI:hover #store_gift, #store_gift.current { background-color: #ffff00; color: #000; }
+LI:hover #store_news, #store_news.current { background-color: #00ccff; color: #fff; }
+LI:hover #store_basket, #store_basket.current { background-color: #ff99cc; color: white; }
+
+#ajax_status { background-color: #fef087; }
+
+/* ------ *
+ * Shared *
+ * ------ */
+
+.small_button, .button { color: #666; }
+.small_button:hover, .button:hover { color: black; }

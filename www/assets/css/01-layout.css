@@ -1,0 +1,114 @@
+/* -------------------------------------------------------------------------- *
+ * Layout                                                                     *
+ * -------------------------------------------------------------------------- */
+
+/* Le contenu s'étend sur toute la hauteur disponible */
+HTML { height: 100%; }
+BODY { min-height: 100%; }
+
+BODY { line-height: 1.4; }
+
+H1 { font-size: 150%; line-height: 1; margin: .5em 1em 1em 0; }
+H2 { font-size: 125%; }
+H3 { font-size: 108.3%; }
+H4 { margin: 1em 0; }
+
+INPUT { padding: .3em; }
+INPUT[type="submit"] { font-size: 87.5%; }
+
+/* IMAGES */
+
+#logo IMG { width: 156px; height: 162px; }
+#baseline { width: 264px; height: 136px; margin-top: -1em; margin-left: -1.5em; }
+
+/* ------ *
+ * Master *
+ * ------ */
+
+/*
+ * global-width : 955px
+ * main-width  : 734px
+ * main_content-height : 442px
+ * preamble-width : 955px (global-width) - 2 * 13px (global-padding) - 734px (main-width)
+ *                  = 195px
+ * font-size : 13px
+ */
+
+/* #global */
+/* 955px - 2 * 13px = 929px / 13px = 71.46em */
+#global { min-width: 929px; width: 71.46em; margin-left: auto; margin-right: auto; padding: 2.5em 1em; }
+
+/* #preamble */
+#preamble { float: left; width: 195px; }
+
+/* #preamble > #menu_site */
+#menu_site { font-size: 92.3%; text-align: right; margin: 0; padding: 4em 4em 0 0; }
+#menu_site LI { list-style: none; }
+/* padding-top: 1.8em; padding-bottom: 2.5em; } */
+#menu_site A { padding: .5em; }
+#menu_site SPAN { display: block; margin-top: 1.8em; margin-bottom: 1.8em; width: 100%; height: 9px; }
+
+/* #main */
+#main { float: left; width: 734px; }
+
+/* #main > #menu_categories */
+#menu_categories { font-size: 92.3%; margin: 1em 0 0 0; padding: 0; }
+#menu_categories LI { float: left; list-style: none; }
+#menu_categories LI.last { float: right; }
+#menu_categories A, #menu_categories SPAN.menu_title { display: inline-block; padding: .5em; }
+LI.more { position: relative; }
+LI.more UL { z-index: 9999; display: none; position: absolute; padding: 0; margin: 0; border: 2px solid; }
+LI.more LI { float: none; display: block !important; padding: 0; margin: 0; }
+LI.more > UL A, LI.more > UL LI SPAN { display: inline-block; width: 10em; margin: 0; padding: .5em; }
+LI.more > UL A:before { content: " - "; }
+LI.more > A + SPAN, LI.more > SPAN + SPAN, LI.single > A + SPAN { display: inline-block; width: 5px; height: 5px; margin: 0 1em 1px 1em; }
+
+/* Store basket */
+LI.single #store_basket { display: inline-block; padding-right: 25px; }
+/* width: 5em; } */
+LI.single #store_basket + SPAN { position: absolute; top: .5em; right: .5em; margin-right: 0; display: inline-block; padding: 0; width: 15px; height: 17px; }
+
+/* #main > #breadcrumb */
+#breadcrumb { font-size: 76.92%; padding: .5em; margin: 0; }
+#breadcrumb H1 { display: inline; padding: 0; margin: 0; }
+#breadcrumb SPAN { padding: 0 .5em; }
+
+/* #main > #main_content */
+#main_content { min-height: 350px; margin-top: 1em; font-size: 92.3%; }
+
+/* #footer */
+#footer { font-size: 84.61%; }
+#footer UL { float: right; margin-right: 0; }
+#footer LI { float: left; list-style: none; }
+#footer LI SPAN { display: inline-block; width: 5px; height: 5px; margin: 0 1em 1px 1em; }
+
+#ajax_status { display: none; position: fixed; top: 0; right: 45%; padding: .3em 1em; }
+
+/* ------ *
+ * Shared *
+ * ------ */
+
+SPAN.truk { display: inline-block; width: 16px; height: 9px; }
+
+.minusplus { display: inline-block; height: 24px; }
+.minusplus > SPAN:first-child { margin-top: 6px; }
+.minusplus > SPAN + SPAN { margin-top: 6px; }
+.minus, .plus { display: block; margin: 0; border: 0; width: 9px; height: 9px; }
+
+.button { display: block; margin: 1.5em 0; text-align: center; border: 0; width: 160px; height: 33px; }
+.button > SPAN { display: block; padding: 8px 0 8px 0; }
+.small_button { display: block; margin: .2em 0; text-align: center; border: 0; width: 95px; }
+
+/* Position */
+.rel { position: relative; }
+
+/* Eléments flottants */
+.left { float: left; }
+.right { float: right; }
+.hide { display: none; }
+/* Terminaison manuelle des blocs flottants */
+/* .clear { height: auto; display: block; clear: both; } */
+.clear { clear: both; height: 1px; margin: 0; padding: 0; font-size: 1px; line-height: 0; display: block; }
+/* Terminaison automatique des blocs flottants */
+.clr:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+

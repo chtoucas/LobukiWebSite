@@ -1,0 +1,13 @@
+Order Deny,Allow
+Deny from All
+
+<Files "robots.txt">
+    Order Deny,Allow
+    Allow from All
+</Files>
+
+<Files "index.php">
+    Order Deny,Allow
+    Allow from All
+</Files>
+

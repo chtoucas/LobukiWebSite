@@ -1,0 +1,94 @@
+SetEnv PHP_VER 5_TEST
+Options -Indexes
+
+RewriteEngine on
+
+RewriteRule ^panier$ /index.php?controller=store&action=basket [L]
+RewriteRule ^acheter$ /index.php?controller=store&action=order [L]
+
+RewriteRule ^_retourcommande.php$ /index.php?controller=paypal&action=validate [L]
+RewriteRule ^confirm.php$ /index.php?controller=paypal&action=synch [L]
+
+RewriteRule ^bon-cadeau$ /index.php?controller=store&action=gift [L]
+RewriteRule ^nouveautes$ /index.php?controller=store&action=news [L]
+
+RewriteRule ^sticker-mural/personnalisation$ /index.php?controller=store&action=personalizeSticker [L]
+
+RewriteRule ^sticker-mural/?$ /index.php?controller=store&action=collection&collection=sticker-mural [L]
+RewriteRule ^sticker-mural/(\d+)?$ /index.php?controller=store&action=collection&collection=sticker-mural&page=$1 [L]
+RewriteRule ^sticker-mural/([^/]+)/?(\d+)?$ /index.php?controller=store&action=category&collection=sticker-mural&category=$1&page=$2 [L]
+RewriteRule ^sticker-mural/([^/]+)/(.*)$ /index.php?controller=store&action=product&collection=sticker-mural&category=$1&product=$2&%{QUERY_STRING} [L]
+
+RewriteRule ^affiche/?$ /index.php?controller=store&action=collection&collection=affiche [L]
+RewriteRule ^affiche/(\d+)?$ /index.php?controller=store&action=collection&collection=affiche&page=$1 [L]
+RewriteRule ^affiche/([^/]+)/?(\d+)?$ /index.php?controller=store&action=category&collection=affiche&category=$1&page=$2 [L]
+RewriteRule ^affiche/([^/]+)/(.*)$ /index.php?controller=store&action=product&collection=affiche&category=$1&product=$2&%{QUERY_STRING} [L]
+
+RewriteRule ^papeterie/?$ /index.php?controller=store&action=collection&collection=papeterie [L]
+RewriteRule ^papeterie/(\d+)?$ /index.php?controller=store&action=collection&collection=papeterie&page=$1 [L]
+RewriteRule ^papeterie/([^/]+)/?(\d+)?$ /index.php?controller=store&action=category&collection=papeterie&category=$1&page=$2 [L]
+RewriteRule ^papeterie/([^/]+)/(.*)$ /index.php?controller=store&action=product&collection=papeterie&category=$1&product=$2&%{QUERY_STRING} [L]
+
+RewriteRule ^textile/?$ /index.php?controller=store&action=collection&collection=textile [L]
+RewriteRule ^textile/(\d+)?$ /index.php?controller=store&action=collection&collection=textile&page=$1 [L]
+RewriteRule ^textile/([^/]+)/?(\d+)?$ /index.php?controller=store&action=category&collection=textile&category=$1&page=$2 [L]
+RewriteRule ^textile/([^/]+)/(.*)$ /index.php?controller=store&action=product&collection=textile&category=$1&product=$2&%{QUERY_STRING} [L]
+
+RewriteRule ^actualite-lobuki$ /index.php?controller=home&action=news [L]
+RewriteRule ^conditions-generales-de-vente$ /index.php?controller=home&action=cgv [L]
+RewriteRule ^contact$ /index.php?controller=home&action=contact [L]
+RewriteRule ^mode-d-emploi$ /index.php?controller=home&action=help [L]
+RewriteRule ^paiement$ /index.php?controller=home&action=payment [L]
+RewriteRule ^plan-du-site$ /index.php?controller=home&action=sitemap [L]
+RewriteRule ^points-de-vente$ /index.php?controller=home&action=resellers [L]
+RewriteRule ^qui-est-lobuki$ /index.php?controller=home&action=about [L]
+RewriteRule ^questions-frequentes$ /index.php?controller=home&action=faq [L]
+
+RewriteRule ^sitemap.xml$ /index.php?controller=home&action=robotmap [L]
+
+SetOutputFilter DEFLATE
+AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript application/x-httpd-php
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|ico)$ no-gzip
+Header append Vary User-Agent env=!dont-vary
+
+<IfModule mod_expires.c>
+ ExpiresActive On
+ #ExpiresDefault "access plus 7200 seconds"
+ ExpiresByType image/jpg "access plus 2592000 seconds"
+ ExpiresByType image/jpeg "access plus 2592000 seconds"
+ ExpiresByType image/png "access plus 2592000 seconds"
+ ExpiresByType image/gif "access plus 2592000 seconds"
+ ExpiresByType image/vnd.microsoft.icon "access plus 2592000 seconds"
+ ExpiresByType image/ico "access plus 2592000 seconds"
+ ExpiresByType image/icon "access plus 2592000 seconds"
+ ExpiresByType image/x-icon "access plus 2592000 seconds"
+ ExpiresByType text/css "access plus 2592000 seconds"
+ ExpiresByType text/javascript "access plus 2592000 seconds"
+ #ExpiresByType text/html "access plus 7200 seconds"
+ ExpiresByType application/xhtml+xml "access plus 7200 seconds"
+ ExpiresByType application/javascript A259200
+ ExpiresByType application/x-javascript "access plus 2592000 seconds"
+ ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+ <FilesMatch "\\.(ico|jpe?g|png|gif|swf|gz|ttf)$">
+ Header set Cache-Control "max-age=2592000, public"
+ </FilesMatch>
+ <FilesMatch "\\.(css)$">
+ Header set Cache-Control "max-age=2592000, public"
+ </FilesMatch>
+ <FilesMatch "\\.(js)$">
+ Header set Cache-Control "max-age=2592000, public"
+ </FilesMatch>
+<filesMatch "\\.(html|htm)$">
+Header set Cache-Control "max-age=7200, public"
+</filesMatch>
+<FilesMatch "\.(php)$">
+Header unset Cache-Control
+</FilesMatch>
+</IfModule>

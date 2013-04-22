@@ -1,0 +1,52 @@
+/* -------------------------------------------------------------------------- *
+ * Typography                                                                 *
+ * -------------------------------------------------------------------------- */
+
+/* ---------- *
+ * Font faces *
+ * ---------- */
+
+BODY, H1, H2, H3, H4, H5, H6, SELECT, INPUT, BUTTON, TEXTAREA #menu_categories, #menu_site, #breadcrumb, #footer { font-family: "Trebuchet MS" , "Lucida Grande" , "Lucida Sans Unicode" , "Lucida Sans" , Verdana, Arial, sans-serif; }
+
+.form LEGEND { font-family: "Trebuchet MS" , "Lucida Grande" , "Lucida Sans Unicode" , "Lucida Sans" , Verdana, Arial, sans-serif; }
+
+A { text-decoration: none; }
+A:hover, A:focus { text-decoration: none; }
+
+/* ---- *
+ * HTML *
+ * ---- */
+
+H1 { font-weight: bold; }
+H2 { font-weight: bold; font-style: italic; }
+H3 { font-weight: bold; }
+H4 { font-weight: normal; font-style: italic; }
+H5 { font-weight: normal; font-style: italic; }
+H6 { font-weight: normal; font-style: italic; display: inline !important; }
+H6:after { content: ". "; }
+H6 + P { display: inline; }
+
+/* ------ *
+ * Master *
+ * ------ */
+
+#menu_categories LI UL { font-style: italic; }
+
+#breadcrumb { font-style: italic; }
+#breadcrumb SPAN { font-weight: bold; }
+#breadcrumb A:hover { text-decoration: underline; }
+#footer A:hover { text-decoration: underline; }
+
+/* #store_basket.active { font-weight: bold; } */
+/* .plus, .minus { font-weight: bold; } */
+
+/* ------ *
+ * Shared *
+ * ------ */
+
+.small_button, .button { font-size: 100% !important; font-weight: bold; }
+
+/* Formulaires */
+.required_field { font-weight: bold; }
+.form LEGEND { text-transform: uppercase; font-weight: bold; }
+

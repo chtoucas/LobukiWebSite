@@ -1,0 +1,122 @@
+/* -------------------------------------------------------------------------- *
+ * Local                                                                      *
+ * -------------------------------------------------------------------------- */
+
+H1.sticker-mural { color: #ff3399; }
+H1.affiche { color: #33cc66; }
+H1.textile { color: #cc66cc; }
+H1.papeterie { color: #ff0033; }
+
+#warning { margin: 2em 2em 0 0; font-size: .9em; text-align: right; font-weight: bold; }
+#warning SPAN { background-color: yellow; }
+
+.store_product H1.sticker-mural + .subtitle SPAN { background-color: #ff3399; }
+
+.home_payment #main_content, .home_about #main_content,
+.home_contact #main_content, .home_cgv #main_content,
+.home_faq #main_content { width: 425px; }
+.home_resellers H2 { margin-top: 0; }
+
+.store_basket H1 { margin-bottom: 0; }
+.store_basket H1 + DIV H2 { margin-top: 0; }
+.store_basket H2, LEGEND { font-size: 150%; font-weight: bold; color: #666; font-style: normal; margin-bottom: .5em; }
+.store_basket A.underline { text-decoration: underline; }
+.store_basket H2 SPAN, LEGEND SPAN { font-size: 85%; font-style: italic; font-weight: normal; }
+.store_basket #empty { font-size: 1.2em; clear: both; width: 70%; margin-left: auto; margin-right: 0; padding-top: 2em; }
+.store_basket #empty .button { font-size: 85% !important; float: right; }
+.store_basket TABLE, TR, TD, TH { border: 0px none; }
+.store_basket #products { width: 100%; margin-bottom: 3em; }
+.store_basket #products TH SPAN, .store_basket #products TR.summary SPAN { padding: .3em .5em; text-align: left; display: block; background-color: #ff99cc; color: #fff; }
+.store_basket #products TD { padding: .3em .5em; }
+.store_basket #products TD.title DIV, #products TD.price DIV { padding: .2em .5em; text-align: left; color: #fff; background-color: #ffccff ; }
+.store_basket #products TD.preview { width: 25px; height: 25px; }
+.store_basket #products TD.preview IMG { width: 25px; height: 25px; }
+.store_basket #products TD.preview:hover { outline: 1px dotted #666; }
+.store_basket #products TD.title { width: 25em; }
+.store_basket #products TD.title A:hover { color: #666; }
+.store_basket #products TD.title A { color: #fff; }
+.store_basket #products TD.qtity { width: 8em; }
+.store_basket #products TD.qtity FORM { margin-top: -6px; }
+.store_basket #products TD.price { width: 8em; }
+.store_basket #products TD.delete { width: 8em; text-align: center; }
+.store_basket #products .qtity_val { width: 2em; }
+.store_basket FIELDSET > P { width: 85%; margin-left: auto; margin-right: 0; }
+.store_basket LABEL { padding: .2em .5em; background-color: #ff99cc; color: #fff; }
+.store_basket LABEL SPAN { display: inline-block; padding-left: .5em; font-weight: bold; }
+.store_basket INPUT.name { width: 20em; }
+.store_basket INPUT.firstname { width: 19.6em; }
+.store_basket INPUT.street { width: 47em; }
+.store_basket INPUT.zipcode { width: 3em; }
+.store_basket INPUT.email { width: 25em; }
+.store_basket INPUT.phone { width: 17em; }
+.store_basket INPUT.city { width: 35em; }
+.store_basket #payment { width: 85%; margin-left: auto; margin-right: 0; }
+.store_basket #payment P, #payment LI { font-size: 83.3%; }
+.store_basket #paypal { float: left; width: 60%; }
+.store_basket #pay { float: left; width: 35%; margin-left: .5em; padding-left: 1em; }
+.store_basket #pay INPUT { margin-left: auto; margin-right: auto; margin-top: 0; }
+.store_basket #shipping { display: none; }
+.store_basket .mandatory { font-style: italic; padding: .2em .4em; }
+.store_basket .highlight_mandatory { background-color: #ffe9e8; font-weight: bold; }
+.store_basket LEGEND { float: right; width: 60%; padding-left: 1em; }
+.store_basket .para { float: right; width: 60%; border-bottom: 2px solid #666; padding-left: 1em; margin-bottom: 1em; }
+.store_basket #pay .button { font-size: 130% !important; }
+.store_basket .update { display: inline-block; border: 2px solid #cde178; padding: .2em .5em; background-color: #fef087; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+.store_basket .error { background-color: #ffe9e8; }
+.store_basket SPAN.bs { display: inline-block; margin-right: 1em; }
+
+.store_category #main_content UL { padding: 0; margin: 0; }
+.store_category #main_content LI { float: left; list-style: none; padding: 0; margin: .9em .35em .9em 0; width: 180px; height: 150px; text-align: center; }
+.store_category #main_content LI.last { margin-right: 0; }
+.store_category #main_content LI IMG { height: 150px; max-width: 180px; }
+.store_category #main_content LI IMG:hover { outline: 1px dotted #ff99cc; }
+.store_category #main_content .rectangle { width: 180px; height: 150px; }
+.store_category #main_content .square { width: 150px; height: 150px; }
+.store_category .nav { float: right; padding: .5em; margin: 0; font-weight: bold; }
+.store_category .nav A { font-size: 1.5em; }
+
+.store_product #details H1 { margin-top: 0 !important; }
+.store_product H1 SPAN { display: inline-block; background-color: #f10500; color: #fff; font-style: italic; font-weight: normal; margin-left: 1em; font-size: .7em; padding: .2em .4em .3em .4em; }
+.store_product #qty.update { outline: 1px solid #f9C; }
+.store_product .subtitle { margin-top: -.5em; margin-bottom: 2em; }
+.store_product .subtitle SPAN { display: inline-block; padding: .2em .3em; background-color: #ff99cc; color: white; font-style: italic; font-weight: bold; }
+.store_product #imgs { float: left; margin-right: 1em; width: 320px; height: 392px; }
+.store_product #imgs UL { padding: 0; margin: 0; }
+.store_product #imgs LI { float: left; list-style: none; padding: 0; margin: 1em 1em .5em 0; }
+.store_product #imgs LI.last { margin-right: 0; }
+.store_product #medium_imgs LI { margin-top: 0; }
+.store_product #medium_imgs LI A { position: relative; }
+.store_product #medium_imgs SPAN { display: inline-block; z-index: 1; position: absolute; right: 0; bottom: -20px; height: 23px; width: 51px; background-repeat: no-repeat; background-position: bottom right; }
+.store_product #medium_imgs IMG { /* width: 300px; */ height: 300px; }
+.store_product #small_imgs IMG { width: 60px; height: 60px; }
+.store_product #small_imgs IMG:hover, #medium_imgs img:hover { outline: 1px dotted #ff99cc; }
+.store_product #product_chars LI { list-style: none; }
+.store_product #basket { margin-top: 2.5em; }
+.store_product #qty { width: 1.5em; }
+.store_product #nav { margin: 1em 0 2em 0; text-align: center; }
+.store_product #nav H3 { margin: 0; padding: 0; }
+.store_product #nav UL { margin-left: 0; margin-right: 0; }
+.store_product #nav LI { display: inline; list-style: none; padding-left: .5em; padding-right: .5em; }
+.store_product #nav IMG { width: 25px; height: 25px; }
+.store_product #nav LI > IMG { outline: 2px solid #ff99cc; }
+.store_product #nav A IMG:hover { outline: 1px dotted #ff99cc; }
+.store_product #product_chars EM { font-weight: bold; font-style: normal; }
+.store_product label[for=qty] { font-weight: bold; }
+.store_product #basket_feedback { text-align: center; }
+.store_product #basket_feedback A { text-decoration: underline; }
+.store_product #basket_feedback P { padding: 1em; position: relative; display: inline-block; max-width: 80%; background-color: #fef087; border: 2px solid; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+.store_product #basket_feedback P.OK { border-color: #cde178; }
+.store_product #basket_feedback P.KO { border-color: red; }
+.store_product #basket_feedback P.loading { border-color: #fff !important; }
+.store_product #basket_feedback .close { margin-left: 1em; cursor: pointer; float: right; width: 16px; height: 16px; }
+.store_product #update_notice { display: inline-block; padding: .2em .5em; margin-left: 1em; }
+
+.store_collection #main_content UL { padding: 0; margin: 0; }
+.store_collection #main_content LI { float: left; list-style: none; padding: 0; width: 90px; height: 90px; text-align: center; }
+.store_collection #main_content LI.last { margin-right: 0; }
+.store_collection #main_content LI IMG { height: 60px; max-width: 60px; }
+.store_collection #main_content LI IMG:hover { outline: 1px dotted #ff99cc; }
+.store_collection #main_content .square { width: 60px; height: 60px; }
+.store_collection .nav { float: right; padding: .5em; margin: 0; font-weight: bold; }
+.store_collection .nav A { font-size: 1.5em; }
+

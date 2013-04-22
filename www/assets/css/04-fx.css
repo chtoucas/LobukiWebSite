@@ -1,0 +1,45 @@
+/* -------------------------------------------------------------------------- *
+ * Effects                                                                    *
+ * -------------------------------------------------------------------------- */
+
+/* No sprite */
+/*
+#menu_categories LI.more, #menu_categories LI.single { background-image: url("img/bullet-pink.png"); background-repeat: no-repeat; background-position: right; }
+#footer LI { background-image: url("img/bullet-grey.png"); background-repeat: no-repeat; background-position: right; }
+#store_basket { background-image: url("img/basket.png"); background-repeat: no-repeat; background-position: right; padding-right: 1.5em !important; }
+#store_basket.current, #store_basket:hover { background-image: url("img/basket-hover.png"); background-repeat: no-repeat; background-position: right; padding-right: 1.5em; }
+SPAN.truk { display: inline-block; background-image: url("img/truk.png"); background-repeat: no-repeat; width: 16px; height: 9px; }
+*/
+
+/* Sprite */
+LI.more > A + SPAN, LI.more > SPAN + SPAN, LI.single > SPAN { background: url("img/sprite.png") no-repeat -10px -42px; }
+#store_basket + SPAN { background: url("img/sprite.png") no-repeat -10px -107px; }
+#store_basket.current + SPAN, #store_basket:hover + SPAN, #store_basket + SPAN:hover { background-position: -10px -69px; }
+#footer LI SPAN { background: url("img/sprite.png") no-repeat -10px -142px; }
+SPAN.truk { background: url("img/sprite.png") -10px -10px no-repeat; }
+
+/* hover background for single items */
+/* .current, #store_basket:hover, #menu_site LI:hover > A, #menu_categories LI.single:hover > SPAN.menu_title, #menu_categories LI.single:hover > A { border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; box-shadow: 0 5px 15px #ccc; -moz-box-shadow: 0 5px 15px #ccc; -webkit-box-shadow: 0 5px 15px #ccc; } */
+
+/* submenu link:hover */
+#menu_categories LI.more:hover > SPAN.menu_title { cursor: default; }
+/* #menu_categories .current:hover > SPAN.menu_title, #menu_categories LI.more:hover > SPAN.menu_title, #menu_categories LI.more:hover > A { border-radius: 0px; -moz-border-radius: 0px; -webkit-border--radius: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; box-shadow: 0 5px 15px #ccc; -moz-box-shadow: 0 5px 15px #ccc; -webkit-box-shadow: 0 5px 15px #ccc; } */
+
+/* submenu list border & shadow */
+/* LI.more UL { border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; -moz-border-radius-topright: 5px; -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-top-right-radius: 5px; -webkit-border-bottom-left-radius: 5px; -webkit-border-bottom-right-radius: 5px; box-shadow: 0 5px 15px #ccc; -moz-box-shadow: 0 5px 15px #ccc; -webkit-box-shadow: 0 5px 15px #ccc; } */
+
+#ajax_status { border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-bottom-left-radius: 5px; -webkit-border-bottom-right-radius: 5px; box-shadow: 0 5px 15px #ccc; -moz-box-shadow: 0 5px 15px #ccc; -webkit-box-shadow: 0 5px 15px #ccc; }
+
+/* submenu item:hover background color */
+#menu_site LI SPAN { background: url("img/dots.png") no-repeat bottom right; }
+
+.button { background: url("img/button.png") no-repeat center center; cursor: pointer; }
+
+/* .minus, .plus { cursor: pointer; } */
+.plus { background: url("img/plus.png") no-repeat center center; cursor: pointer; }
+.minus { background: url("img/minus.png") no-repeat center center; cursor: pointer; }
+
+.small_button { background: url("img/small_button.png") no-repeat center center; cursor: pointer; }
+.disabled_button { cursor: default; }
+.zoom { background: url("img/zoom.png") no-repeat; }
+
