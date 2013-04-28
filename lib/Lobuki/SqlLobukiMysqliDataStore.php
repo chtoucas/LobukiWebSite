@@ -1,5 +1,4 @@
 <?php
-/// Author: Pascal Tran-Ngoc-Bich <chtoucas@narvalo.org>
 
 require_once 'Narvalo.php';
 
