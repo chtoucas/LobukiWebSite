@@ -874,47 +874,6 @@ class RequestContext {
 
 // }}}
 
-/*
-// {{{ HttpServer
-
-class HttpServer {
-    private
-        /// \var Narvalo\Web\HttpApplication
-        $_httpApplication;
-
-    private static
-        /// \var Narvalo\Web\IHttpModules[]
-        $_Modules = array();
-
-    public function __construct(HttpApplication $_httpApplication_) {
-        $this->_httpApplication = $_httpApplication_;
-    }
-
-    public static function AddModule(IHttpModule $_module_) {
-        self::$_Modules[] = $_module_;
-    }
-
-    public function start() {
-        $this->_httpApplication->onStart();
-
-        foreach (self::$_Modules as $module) {
-            $module->init($this->_httpApplication);
-        }
-    }
-
-    public function processRequest() {
-        $context = new HttpContext(new HttpRequest(), new HttpResponse());
-        $this->_httpApplication->processRequest($context);
-    }
-
-    public function shutdown() {
-        $this->_httpApplication->onEnd();
-    }
-}
-
-// }}}
- */
-
 // {{{ IPathFactory
 
 interface IPathFactory {
