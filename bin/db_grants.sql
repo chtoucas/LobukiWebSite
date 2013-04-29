@@ -1,7 +1,0 @@
-GRANT ALL PRIVILEGES ON lobukisticker.*
-TO lobukisticker@'127.0.0.1' IDENTIFIED BY 'lobu3510' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON lobukisticker.*
-TO lobukisticker@'localhost' IDENTIFIED BY 'lobu3510' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON lobukisticker.*
-TO lobukisticker@'192.168.1.%' IDENTIFIED BY 'lobu3510' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
